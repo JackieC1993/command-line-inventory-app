@@ -1,0 +1,10 @@
+[
+    {"item": "cat wand", "price": 3.00 },
+    {"item": "cat yarn", "price": 6.00 },
+    {"item": "cat playtoy", "price": 1.00},
+]
+
+// node index add -- item = catyarn --price =10
+// node index remove --item = catwand
+// node app print
+// node app priceOf -- item = catwand

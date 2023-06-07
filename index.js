@@ -1,27 +1,26 @@
-const chalk = require('chalk');
-const { readJSONFile, writeJSONFile } = require("./src/helpers")
-const { index, show, create, edit, destroy} = require("./src/stylesController");
 const inform = console.log;
+const {readJSONFile, writeJSONFile } = require("./src/helpers")
+const { index, show, create, edit, destroy,} = require("./src/controller");
 
 
 function run() {
-    inform("Welcome to our  App 💆🏽‍♀️🪮\n\n");
+    inform("Welcome to our  App \n\n");
 
     let styles = readJSONFile("data", "styles.json");
     console.log("the style from indexJS", styles)
 
     const action = process.argv[2]; //action user typed in
-    const styleId = process.argv[3]; //style
-    let writeToFile = false;
+    const petsId = process.argv[3]; //pets
+    let writeToFile = true;
 
     switch (action) {
         case "index":
-            const styleView = index(styles)
-            inform(styleView);
+            const petFun = index(styles)
+            inform(petFun);
             break;
         case "show":
-            const viewShow = show(styles, styleId)
-            inform(viewShow);
+            const travelShow = show(styles, styleId)
+            inform(travelShow);
             break;
         case "update":
             updatedPurchases = edit(styles, styleId, process.argv[4]);
@@ -37,7 +36,7 @@ function run() {
             break;
 
         default: 
-        inform("Hey, did you forget something? Your cart is empty 🫠");
+        inform("Hey, did you forget something? Your cart is empty ");
         
     }
     if (writeToFile) {
