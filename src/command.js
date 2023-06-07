@@ -1,9 +1,16 @@
+const fs = require('fs');
+
 const add = (item, price){
- console.log('adding' + item + ' ' + price)
+   try{
+     fs.readFileSync("groceryList.json");
+   } catch (e) {
+    console.log(e)
+   }
+
+    
+
 }
 
-
-
-module.exports{
+module.exports = {
     add
 }

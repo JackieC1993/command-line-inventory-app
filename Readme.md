@@ -2,12 +2,11 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
 - My motivation is to build a clientelte store that customers would enjoy with their pets.
-- The reason I build this project becuase I have a passion on
-- What problem does it solve?
-- What did you learn?
+- The reason I build this project because I have a passion for taking care of cats and to show owners that they can adopt the pets of their choice.
+- The problem it solve will be the loneiness in a household.
+- I learn that people can have cats/kitten to solve their loneilness and a companion.
 
 ## Table of Contents (Optional)
 
