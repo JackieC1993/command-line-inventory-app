@@ -19,3 +19,8 @@ function show(customerCart, item) {
   }
 }
 
+function create (customerCart, item) {
+const cart = inventory.find((specificItem)=> specificItem.name === item)
+const newPurchase = {id:`${nanoid(6)}`, item: cart.item, price : cart.price, size : cart.size, inStock: cart.inStock}
+}
+
