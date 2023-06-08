@@ -1,0 +1,4 @@
+// node index add -- item = catyarn --price =10
+// node index remove --item = catwand
+// node app print
+// node app priceOf -- item = catwand

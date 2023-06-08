@@ -1,35 +1,34 @@
-# <Cat/Kitten Shop>
-
+# The Purrfect Store
+![Breadcoat-British-Shorthair](https://github.com/JackieC1993/JackieC1993/assets/131386755/4df120cf-4703-40fd-a42d-4b4c9601af5c)
 ## Description
 
+"The motivation behind building this project is to create a clientele store where customers and their pets can enjoy a fulfilling experience, while also promoting the adoption of pets. The goal is to address the problem of loneliness in households by showcasing the benefits of pet companionship and providing a space where individuals can find and adopt the pets of their choice."
 
-- My motivation is to build a clientelte store that customers would enjoy with their pets.
-- The reason I build this project because I have a passion for taking care of cats and to show owners that they can adopt the pets of their choice.
-- The problem it solve will be the loneiness in a household.
-- I learn that people can have cats/kitten to solve their loneilness and a companion.
+ ## Command Line Inventory App - Puurfect Store
+Welcome,
 
-## Table of Contents (Optional)
+You will learn how to use the inventory app through the command line. 
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+Be sure to run npm init -y to install the scripts from package.json.
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+Before running any functions, be sure to create the appropriate scripts in the package.json file. 
+
+![kitten wands](https://github.com/JackieC1993/JackieC1993/assets/131386755/e3bf8e11-b44f-4238-8e66-e8926fb7d3a0)
+
 
 ## Installation
 
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
 ## Usage
+create() : This function allows users to put specific items into their cart. To run function, use following command:
+
+ 
 
 Provide instructions and examples for use. Include screenshots as needed.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 
@@ -55,7 +54,6 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 
 ## Features
 
-If your project has a lot of features, list them here.
 ![kitten](https://github.com/JackieC1993/JackieC1993/assets/131386755/c3825de2-e129-47d1-a48f-3908f836f88d)
 
 ## How to Contribute

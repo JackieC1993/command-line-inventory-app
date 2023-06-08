@@ -1,17 +1,21 @@
-const yargs = require('yargs')
-const commands = require('./commands')
+const inform = console.log();
+const { nanoid } = require("nanoid");
+const chalk = require("chalk");
+const inventory = require("../data/data.json");
 
-let command = yargs.argv._[0];
-let item = yargs.argv.item;
-let price = yargs.argv.price;
+function index(customerCart) {
+  return customerCart.map(
+    (eachItem) =>
+      `item: ${eachitem.item} price: ${eachItem.price} size ${eachItem.size} inStock ${eachItem.inStock}`
+  );
+}
 
-if(command === "add"){
+function show(customerCart, item) {
+  let singleItem = customerCart.filter((items) => items.name === item);
+  for (let info of singleItem) {
+    return `${chalk.blue(info.item)} ${chalk.yellow(info.price)} ${chalk.cyan(
+      info.size
+    )} ${chalk.red(info.inStock)}`;
+  }
+}
 
-    if(item && price){
-        commands.add(item,price)
-    }
-} else if(command === "remove"){
-
-} else if (command === "print"){
-
-} else if (command === "priceOf")

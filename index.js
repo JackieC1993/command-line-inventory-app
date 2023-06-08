@@ -1,10 +1,10 @@
 const inform = console.log;
-const {readJSONFile, writeJSONFile } = require("./src/helpers")
-const { index, show, create, edit, destroy,} = require("./src/controller");
+const {readJSONFile, writeJSONFile } = require("./src/")
+const { index, show, update, create,createByQuantity,view,destroy, deleteCart,total} = require("./src/controller");
 
 
 function run() {
-    inform("Welcome to our  App \n\n");
+    inform("Welcome to the  App \n\n");
 
     let styles = readJSONFile("data", "styles.json");
     console.log("the style from indexJS", styles)
