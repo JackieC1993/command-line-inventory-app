@@ -6,16 +6,13 @@
   "scripts": {
     "test": "jest",
     "start": "node index.js",
-    "show": "node index.js show",
+    "index": "node index.js index",
     "update": "node index.js update",
     "create": "node index.js create",
-    "createByQuantity": "node index.js createByQuantity",
-    "view": "node index.js view",
+    "show": "node index.js show",
     "destroy": "node index.js destroy",
     "deleteCart": "node index.js deleteCart",
     "total": "node index.js total"
-    
-
   },
   "keywords": [
     "package-lock.json"

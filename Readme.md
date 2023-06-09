@@ -3,7 +3,7 @@
 ## Description
 
 "The motivation behind building this project is to create a clientele store where customers and their pets can enjoy a fulfilling experience, while also promoting the adoption of pets. The goal is to address the problem of loneliness in households by showcasing the benefits of pet companionship and providing a space where individuals can find and adopt the pets of their choice."
-
+![kitten](https://github.com/JackieC1993/JackieC1993/assets/131386755/168c8815-032e-451d-8396-372992337dc7)
  ## Command Line Inventory App - Puurfect Store
 Welcome,
 
@@ -55,7 +55,7 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 ## Features
 
 ![kitten](https://github.com/JackieC1993/JackieC1993/assets/131386755/c3825de2-e129-47d1-a48f-3908f836f88d)
-
+![image](https://github.com/JackieC1993/JackieC1993/assets/131386755/548099c2-dca6-43bc-9121-40450234f048)
 ## How to Contribute
 
 If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.

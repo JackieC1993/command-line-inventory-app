@@ -1,47 +1,56 @@
 const inform = console.log;
-const {readJSONFile, writeJSONFile } = require("./src/")
-const { index, show, update, create,createByQuantity,view,destroy, deleteCart,total} = require("./src/controller");
+const {readJSONFile, writeJSONFile } = require("./src/helper")
+const { index, show, update, create,destroy, deleteCart,total} = require("./src/controller");
 
 
 function run() {
-    inform("Welcome to the  App \n\n");
+    inform("Welcome to the Puurfect Store \n\n");
 
-    let styles = readJSONFile("data", "styles.json");
-    console.log("the style from indexJS", styles)
+
+    let data = readJSONFile("data", "cart.json");
+    let writeToFile = false;
+    let updatedPurchases = [];
 
     const action = process.argv[2]; //action user typed in
-    const petsId = process.argv[3]; //pets
-    let writeToFile = true;
+    const purchase = process.argv[3]; //pets
 
     switch (action) {
         case "index":
-            const petFun = index(styles)
+            const petFun = index(data)
             inform(petFun);
             break;
         case "show":
-            const travelShow = show(styles, styleId)
+            const travelShow = show(data, purchase)
             inform(travelShow);
             break;
         case "update":
-            updatedPurchases = edit(styles, styleId, process.argv[4]);
+            updatedPurchases = update(data,purchase, process.argv[4]);
              writeToFile = true;
              break;
         case "create":
-            updatedStyle = create(styles, styleId);
+           updatedPurchases = create(data,purchase);
             writeToFile = true;
             break;
         case "destroy":
-            updatednewStyle = destroy(styles, styleId );
+            updatedPurchases = destroy(data,purchase);
              writeToFile = true;
+            break;
+        case "deleteCart":
+            updatedPurchases = deleteCart(data,purchase);
+            writeToFile = true;
+            break;
+        case "total":
+             let totalPrice = total(data);
+             inform (totalPrice)
             break;
 
         default: 
-        inform("Hey, did you forget something? Your cart is empty ");
+        inform("Hey, did you forget something, boss? Your cart is empty ");
         
     }
     if (writeToFile) {
-    writeJSONFile("data", "styles.json", styles);
-    inform("Thank you. Styles have been updated");
+    writeJSONFile("data", "cart.json", updatedPurchases);
+    inform("Thank you. data have been updated");
     }
 
 }
