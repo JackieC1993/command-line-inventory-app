@@ -7,10 +7,10 @@ function run() {
     inform("Welcome to the Puurfect Store \n\n");
 
 
-    let data = readJSONFile("data", "cart.json");
+    let data = readJSONFile("data", "data.json");
     let writeToFile = false;
     let updatedPurchases = [];
-
+    
     const action = process.argv[2]; //action user typed in
     const purchase = process.argv[3]; //pets
 
@@ -22,9 +22,10 @@ function run() {
         case "show":
             const travelShow = show(data, purchase)
             inform(travelShow);
+            console.log(travelShow)
             break;
         case "update":
-            updatedPurchases = update(data,purchase, process.argv[4]);
+            updatedPurchases = update(data,purchase);
              writeToFile = true;
              break;
         case "create":
@@ -50,7 +51,7 @@ function run() {
     }
     if (writeToFile) {
     writeJSONFile("data", "cart.json", updatedPurchases);
-    inform("Thank you. data have been updated");
+    inform("Thank you. item have been updated");
     }
 
 }

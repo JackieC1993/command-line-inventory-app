@@ -1,5 +1,5 @@
 # The Purrfect Store
-![Breadcoat-British-Shorthair](https://github.com/JackieC1993/JackieC1993/assets/131386755/4df120cf-4703-40fd-a42d-4b4c9601af5c)
+<img src="https://github.com/JackieC1993/JackieC1993/assets/131386755/4df120cf-4703-40fd-a42d-4b4c9601af5c" width ="300"/>
 ## Description
 
 "The motivation behind building this project is to create a clientele store where customers and their pets can enjoy a fulfilling experience, while also promoting the adoption of pets. The goal is to address the problem of loneliness in households by showcasing the benefits of pet companionship and providing a space where individuals can find and adopt the pets of their choice."

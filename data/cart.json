@@ -1,0 +1,27 @@
+[
+  {
+    "item": "cat_wand",
+    "price": 3,
+    "size": "os",
+    "inStock": true
+  },
+  {
+    "item": "cat_yarn",
+    "price": 6,
+    "size": "m",
+    "inStock": false
+  },
+  {
+    "item": "cat_playtoy",
+    "price": 1,
+    "size": "os",
+    "inStock": true
+  },
+  {
+    "id": "qHTb",
+    "item": "cat_wand",
+    "price": 3,
+    "size": "os",
+    "inStock": true
+  }
+]

@@ -5,37 +5,40 @@ const inventory = require("../data/data.json");
 
 function index(customerCart) {
   return customerCart.map(
-    (eachItem) =>
-      `item: ${eachitem.item} price: ${eachItem.price} size: ${eachItem.size} inStock: ${eachItem.inStock}`
+    (inventory) =>
+      `item: ${inventory.item} price: ${inventory.price} size: ${inventory.size} inStock: ${inventory.inStock}`
   );
 }
 
 function show(customerCart, item) {
-  let singleItem = customerCart.filter((items) => items.name === item);
-  for (let info of singleItem) {
-    return `${chalk.blue(info.item)} ${chalk.yellow(info.price)} ${chalk.cyan(
-      info.size
-    )} ${chalk.red(info.inStock)}`;
+  let matchingItems = customerCart.filter((inventory) => inventory[item] === item);
+  let result = "";
+  for (let inventory of matchingItems) {
+    return `${chalk.blue(inventory.item)} $${chalk.yellow(inventory.price.toFixed(2))} ${chalk.cyan(
+      inventory.size
+    )} ${chalk.red(inventory.inStock)}`;
   }
+  return result;
 }
 
 function create(customerCart, item) {
-  const cart = inventory.find((specificItem) => specificItem.name === item);
+  const cart = inventory.find((specificItem) => specificItem[item] === item);
   const newPurchase = {
-    id: `${nanoid(6)}`,
-    item: cart.item,
-    price: cart.price,
-    size: cart.size,
-    inStock: cart.inStock,
+    id: nanoid(4),
+    item: cart['item'],
+    price: cart['price'],
+    size: cart['size'],
+    inStock: cart['inStock'],
   };
   customerCart.push(newPurchase);
+  console.log(cart)
   return customerCart;
 }
 
 function update(customerCart, itemId, itemPurchase) {
   const index = customerCart.findIndex((purchase) => purchase.id === itemId);
   const updateCart = inventory.find(
-    (purchase) => purchase.name === itemPurchase
+    (purchase) => purchase.item === itemPurchase
   );
   if (index > -1) {
     customerCart[index].item = itemPurchase;
@@ -47,7 +50,7 @@ function update(customerCart, itemId, itemPurchase) {
 }
 
 function destroy(customerCart, itemName) {
-  const index = customerCart.findIndex((item) => itemName === item.name);
+  const index = customerCart.findIndex((item) => itemName === item.item);
   if (index > -1) {
     customerCart.splice(index, 1);
     return customerCart;
