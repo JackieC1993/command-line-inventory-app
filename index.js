@@ -13,6 +13,11 @@ function run() {
     
     const action = process.argv[2]; //action user typed in
     const purchase = process.argv[3]; //pets
+    const itemId = process.argv[4];
+    const itemPrice = process.argv[5];
+    const itemSize = process.argv[6];
+    const itemInStock = process.argv[7];
+    const itemPurchase = process.argv[8]
 
     switch (action) {
         case "index":
@@ -22,11 +27,11 @@ function run() {
         case "show":
             const travelShow = show(data, purchase)
             inform(travelShow);
-            console.log(travelShow)
             break;
         case "update":
-            updatedPurchases = update(data,purchase);
+            updatedPurchases = update(data,purchase,itemPrice,itemSize,itemInStock,itemPurchase);
              writeToFile = true;
+             inform(updatedPurchases);
              break;
         case "create":
            updatedPurchases = create(data,purchase);

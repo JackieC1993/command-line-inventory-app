@@ -1,6 +1,16 @@
 [
-    {"item": "cat_wand",  "price": 3.00 , "size":"os", "inStock":true},
-    {"item": "cat_yarn", "price": 6.00, "size":"m", "inStock":false },
-    {"item": "cat_playtoy", "price": 1.00,"size": "os" ,"inStock":true}
+    {"item": "cat_wand",  "price": 3 , "size":"os", "inStock":true},
+    {"item": "cat_yarn", "price": 6, "size":"m", "inStock":true },
+    {"item": "cat_playtoy", "price": 1,"size": "os" ,"inStock":true}
 ]
+
+
+
+
+
+
+
+
+
+
 

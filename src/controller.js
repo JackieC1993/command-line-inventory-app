@@ -35,17 +35,27 @@ function create(customerCart, item) {
   return customerCart;
 }
 
-function update(customerCart, itemId, itemPurchase) {
-  const index = customerCart.findIndex((purchase) => purchase.id === itemId);
-  const updateCart = inventory.find(
-    (purchase) => purchase.item === itemPurchase
-  );
-  if (index > -1) {
-    customerCart[index].item = updateCart.item;
-    customerCart[index].price = updateCart.price;
-    customerCart[index].size = updateCart.size;
-    customerCart[index].inStock = updateCart.inStock;
-    return customerCart;
+function update(data,purchase,itemId,itemPurchase) {
+
+
+  const index = data.findIndex((item) => item.item === action);
+
+
+
+  if (index !== -1) {
+
+      data[index].item = action;
+      data[index].price = purchase;
+      data[index].size = itemId;
+      data[index].inStock = itemPurchase;
+      writeJSONFile(data)
+
+      inform("Cart successfully updated");
+      return data;
+  } else {
+
+      inform("Item not found. No action taken");
+      return data;
   }
 }
 

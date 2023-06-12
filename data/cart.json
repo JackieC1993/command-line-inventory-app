@@ -1,26 +1,14 @@
 [
-  {
-    "item": "cat_wand",
-    "price": 3,
-    "size": "os",
-    "inStock": true
-  },
+  {},
   {
     "item": "cat_yarn",
     "price": 6,
     "size": "m",
-    "inStock": false
+    "inStock": true
   },
   {
     "item": "cat_playtoy",
     "price": 1,
-    "size": "os",
-    "inStock": true
-  },
-  {
-    "id": "a2xq",
-    "item": "cat_wand",
-    "price": 3,
     "size": "os",
     "inStock": true
   }

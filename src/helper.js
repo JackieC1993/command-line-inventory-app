@@ -1,4 +1,6 @@
 const { readFileSync, writeFileSync } = require("node:fs");
+const path = ("./data")
+
 
 function readJSONFile(path, fileName) {
   const object = readFileSync(`${path}/${fileName}`, "utf-8");
