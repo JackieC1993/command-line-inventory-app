@@ -1,7 +1,7 @@
 const { index, create, update } = require("../src/controller.js");
 
 const customerCart = require("../__Tests__/sampleTestData.json");
-function run()
+
 describe ("Generating view of objects from Customer Cart", () => {
   test("Checks for valid array output", () => {
     expect(index(customerCart)).toEqual([

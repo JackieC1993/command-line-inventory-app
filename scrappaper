@@ -2,3 +2,56 @@
 // node index remove --item = catwand
 // node app print
 // node app priceOf -- item = catwand
+
+// Import required dependencies
+const chalk = require('chalk');
+const { nanoid } = require('nanoid');
+
+// CustomerCart data
+const customerCart = require('../__Tests__/sampleTestData.json');
+
+// Function to generate view of objects from Customer Cart
+function index(customerCart) {
+  return customerCart.map(
+    (inventory) =>
+      `item: ${inventory.item} price: ${inventory.price} size: ${inventory.size} inStock: ${inventory.inStock}`
+  );
+}
+
+// Function to show specific item details from Customer Cart
+function show(customerCart, item) {
+  let matchingItems = customerCart.filter((inventory) => inventory.item === item);
+  let result = "";
+  for (let inventory of matchingItems) {
+    result += `${chalk.blue(inventory.item)} $${chalk.yellow(inventory.price.toFixed(2))} ${chalk.cyan(
+      inventory.size
+    )} ${chalk.red(inventory.inStock)}\n`;
+  }
+  return result;
+}
+
+// Function to create a new purchase and add it to the Customer Cart
+function create(customerCart, item) {
+  const cart = customerCart.find((specificItem) => specificItem.item === item);
+  if (cart) {
+    const newPurchase = {
+      id: nanoid(4),
+      item: cart.item,
+      price: cart.price,
+      size: cart.size,
+      inStock: cart.inStock,
+    };
+    customerCart.push(newPurchase);
+    console.log(newPurchase);
+    return customerCart;
+  }
+  return customerCart;
+}
+
+// Example usage
+console.log(index(customerCart)); // Generating view of objects from Customer Cart
+console.log(show(customerCart, 'cat_wand')); // Showing specific item details
+console.log(create(customerCart, 'cat_wand')); // Creating a new purchase
+
+// Export the functions if needed
+module.exports = { index, show, create };

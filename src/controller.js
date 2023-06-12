@@ -41,7 +41,7 @@ function update(customerCart, itemId, itemPurchase) {
     (purchase) => purchase.item === itemPurchase
   );
   if (index > -1) {
-    customerCart[index].item = itemPurchase;
+    customerCart[index].item = updateCart.item;
     customerCart[index].price = updateCart.price;
     customerCart[index].size = updateCart.size;
     customerCart[index].inStock = updateCart.inStock;
